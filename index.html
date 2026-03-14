@@ -279,6 +279,10 @@ footer{background:var(--dark3);padding:72px 0 36px;border-top:1px solid rgba(253
 /* fallback gradient for posts */
 .ig-post-fb{position:absolute;inset:0;background:var(--grad);opacity:.6;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px}
 .ig-post-fb svg{opacity:.5}
+/* video posts */
+.ig-post video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.ig-post:hover video{transform:scale(1.07)}
+.ig-vid-badge{position:absolute;top:7px;right:7px;color:#fff;pointer-events:none;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5))}
 /* Instagram footer bar */
 .ig-app-foot{display:flex;align-items:center;justify-content:center;padding:16px;border-top:1px solid rgba(255,255,255,.05)}
 
@@ -649,7 +653,7 @@ footer{background:var(--dark3);padding:72px 0 36px;border-top:1px solid rgba(253
           </div>
           <div class="ig-stats-row">
             <div class="ig-st"><span class="n">24</span><span class="l">posts</span></div>
-            <div class="ig-st"><span class="n">2.1K</span><span class="l">followers</span></div>
+            <div class="ig-st"><span class="n">15K</span><span class="l">followers</span></div>
             <div class="ig-st"><span class="n">48</span><span class="l">following</span></div>
           </div>
           <div class="ig-bio-txt">
@@ -705,123 +709,92 @@ footer{background:var(--dark3);padding:72px 0 36px;border-top:1px solid rgba(253
         </div>
       </div>
 
-      <!-- Posts grid (9 posts) -->
+      <!-- Posts grid (9 posts — real OBK content) -->
       <div class="ig-posts" id="ig-posts">
 
-        <!-- Post 1 -->
+        <!-- Post 1 — OBK shopfront photo -->
         <div class="ig-post" onclick="window.open('https://www.instagram.com/_obk_tdpa/','_blank')">
-          <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&h=400&fit=crop&q=80" alt="OBK Biriyani" loading="lazy"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ig-post-fb" style="display:none">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M6 14 C4 18 3 23 4 26 C5 28 9 30 16 30 C23 30 27 28 28 26 C29 23 28 18 26 14Z" fill="white" opacity=".3"/><ellipse cx="16" cy="7" rx="7" ry="2" fill="white" opacity=".3"/></svg>
-          </div>
-          <div class="ig-post-ov">
-            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>234</div>
-            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>18</div>
-          </div>
-        </div>
-
-        <!-- Post 2 -->
-        <div class="ig-post" onclick="window.open('https://www.instagram.com/_obk_tdpa/','_blank')">
-          <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&h=400&fit=crop&q=80" alt="OBK Biriyani" loading="lazy"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ig-post-fb" style="display:none">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M22 4 C25 4 28 7 28 10 C28 13 26 15 23 16 L12 27 C11 28 9 28 8 27 C7 26 7 24 8 23 L19 12" fill="white" opacity=".3"/></svg>
-          </div>
-          <div class="ig-post-ov">
-            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>189</div>
-            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>24</div>
-          </div>
-        </div>
-
-        <!-- Post 3 -->
-        <div class="ig-post" onclick="window.open('https://www.instagram.com/_obk_tdpa/','_blank')">
-          <img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=400&h=400&fit=crop&q=80" alt="OBK Food" loading="lazy"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ig-post-fb" style="display:none">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M6 26 C8 20 10 14 16 8 C22 6 26 8 26 8" fill="white" opacity=".3"/></svg>
-          </div>
-          <div class="ig-post-ov">
-            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>312</div>
-            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>31</div>
-          </div>
-        </div>
-
-        <!-- Post 4 -->
-        <div class="ig-post" onclick="window.open('https://www.instagram.com/_obk_tdpa/','_blank')">
-          <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&h=400&fit=crop&q=80" alt="OBK Food" loading="lazy"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ig-post-fb" style="display:none">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><ellipse cx="16" cy="18" rx="10" ry="12" fill="white" opacity=".3"/></svg>
-          </div>
-          <div class="ig-post-ov">
-            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>156</div>
-            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>12</div>
-          </div>
-        </div>
-
-        <!-- Post 5 (centre - hero post) -->
-        <div class="ig-post" onclick="window.open('https://www.instagram.com/_obk_tdpa/','_blank')">
-          <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=400&fit=crop&q=80" alt="OBK Specials" loading="lazy"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ig-post-fb" style="display:none">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M6 14 C4 18 3 23 4 26 C5 28 9 30 16 30 C23 30 27 28 28 26 C29 23 28 18 26 14Z" fill="white" opacity=".3"/></svg>
-          </div>
+          <img src="649230891_17895374118420071_8919483843663000480_n.webp" alt="Where every bite tells a story — OBK Thodupuzha" loading="lazy">
           <div class="ig-post-ov">
             <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>487</div>
             <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>56</div>
           </div>
         </div>
 
-        <!-- Post 6 -->
+        <!-- Post 2 — Video -->
         <div class="ig-post" onclick="window.open('https://www.instagram.com/_obk_tdpa/','_blank')">
-          <img src="https://images.unsplash.com/photo-1567337710282-00832b415979?w=400&h=400&fit=crop&q=80" alt="OBK Food" loading="lazy"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ig-post-fb" style="display:none">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M4 16 C8 10 16 8 24 12 L28 16" fill="white" opacity=".3"/></svg>
+          <video autoplay muted loop playsinline><source src="Video-282.mp4" type="video/mp4"></video>
+          <div class="ig-vid-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2" fill="white"/></svg></div>
+          <div class="ig-post-ov">
+            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>312</div>
+            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>31</div>
           </div>
+        </div>
+
+        <!-- Post 3 — Women's Day biryani -->
+        <div class="ig-post" onclick="window.open('https://www.instagram.com/_obk_tdpa/','_blank')">
+          <img src="645632057_17894887077420071_7257845663836114554_n.webp" alt="Happy Women's Day — OBK Biriyani" loading="lazy">
+          <div class="ig-post-ov">
+            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>341</div>
+            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>37</div>
+          </div>
+        </div>
+
+        <!-- Post 4 — Video -->
+        <div class="ig-post" onclick="window.open('https://www.instagram.com/_obk_tdpa/','_blank')">
+          <video autoplay muted loop playsinline><source src="Video-130.mp4" type="video/mp4"></video>
+          <div class="ig-vid-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2" fill="white"/></svg></div>
+          <div class="ig-post-ov">
+            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>234</div>
+            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>18</div>
+          </div>
+        </div>
+
+        <!-- Post 5 — 15K Followers (centre hero) -->
+        <div class="ig-post" onclick="window.open('https://www.instagram.com/_obk_tdpa/','_blank')">
+          <img src="645547660_17894123829420071_6043582833657109_n.webp" alt="Thank You 15K Followers — OBK" loading="lazy">
+          <div class="ig-post-ov">
+            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>891</div>
+            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>74</div>
+          </div>
+        </div>
+
+        <!-- Post 6 — Video -->
+        <div class="ig-post" onclick="window.open('https://www.instagram.com/_obk_tdpa/','_blank')">
+          <video autoplay muted loop playsinline><source src="Video-563.mp4" type="video/mp4"></video>
+          <div class="ig-vid-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2" fill="white"/></svg></div>
           <div class="ig-post-ov">
             <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>203</div>
             <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>19</div>
           </div>
         </div>
 
-        <!-- Post 7 -->
+        <!-- Post 7 — Ramadan Iftar -->
         <div class="ig-post" onclick="window.open('https://www.instagram.com/_obk_tdpa/','_blank')">
-          <img src="https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?w=400&h=400&fit=crop&q=80" alt="OBK Biriyani" loading="lazy"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ig-post-fb" style="display:none">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M6 14 C4 18 3 23 4 26 C5 28 9 30 16 30" fill="white" opacity=".3"/></svg>
+          <img src="639964675_17893528911420071_2085336638173413728_n.webp" alt="Ramadan Iftar Raav — OBK" loading="lazy">
+          <div class="ig-post-ov">
+            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>456</div>
+            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>48</div>
           </div>
+        </div>
+
+        <!-- Post 8 — Video -->
+        <div class="ig-post" onclick="window.open('https://www.instagram.com/_obk_tdpa/','_blank')">
+          <video autoplay muted loop playsinline><source src="Video-770.mp4" type="video/mp4"></video>
+          <div class="ig-vid-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2" fill="white"/></svg></div>
           <div class="ig-post-ov">
             <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>178</div>
             <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>15</div>
           </div>
         </div>
 
-        <!-- Post 8 -->
+        <!-- Post 9 — Video -->
         <div class="ig-post" onclick="window.open('https://www.instagram.com/_obk_tdpa/','_blank')">
-          <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?w=400&h=400&fit=crop&q=80" alt="OBK Food" loading="lazy"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ig-post-fb" style="display:none">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="6" y="10" width="20" height="14" rx="3" fill="white" opacity=".3"/></svg>
-          </div>
+          <video autoplay muted loop playsinline><source src="Video-171.mp4" type="video/mp4"></video>
+          <div class="ig-vid-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2" fill="white"/></svg></div>
           <div class="ig-post-ov">
             <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>264</div>
             <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>28</div>
-          </div>
-        </div>
-
-        <!-- Post 9 -->
-        <div class="ig-post" onclick="window.open('https://www.instagram.com/_obk_tdpa/','_blank')">
-          <img src="https://images.unsplash.com/photo-1617196034183-421b4040f9a0?w=400&h=400&fit=crop&q=80" alt="OBK Rice" loading="lazy"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="ig-post-fb" style="display:none">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 6 C5 8 4 12 6 15 L14 24" fill="white" opacity=".3"/></svg>
-          </div>
-          <div class="ig-post-ov">
-            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>341</div>
-            <div class="ig-ps"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>37</div>
           </div>
         </div>
 
@@ -897,7 +870,7 @@ footer{background:var(--dark3);padding:72px 0 36px;border-top:1px solid rgba(253
             <div class="c-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
             <div class="c-ti">Address</div>
           </div>
-          <div class="c-val">OBK — Oru Biriyani Kadha<br>Old Mink Food Street<br>Thodupuzha, Idukki District<br>Kerala — 685 584</div>
+          <div class="c-val">OBK — Oru Biriyani Kadha<br>The Old Monk Food Street<br>River View Road, Thodupuzha<br>Kerala — 685 584</div>
         </div>
         <div class="ccard">
           <div class="ccard-h">
@@ -916,6 +889,10 @@ footer{background:var(--dark3);padding:72px 0 36px;border-top:1px solid rgba(253
             <div class="c-ti">Contact</div>
           </div>
           <div class="c-val">
+            <a href="tel:+918547365920" style="color:var(--gold);display:flex;align-items:center;gap:6px;font-size:.95rem;margin-bottom:8px;font-weight:600">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +91 8547 365 920
+            </a>
             <a href="https://www.instagram.com/_obk_tdpa/" target="_blank" style="color:var(--gold);display:flex;align-items:center;gap:6px;font-size:.9rem">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
               @_obk_tdpa on Instagram
